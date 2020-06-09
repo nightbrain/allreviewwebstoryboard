@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DrawerComponent from "./components/Drawer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
@@ -74,6 +74,10 @@ const theme = createMuiTheme({
 export default function App() {
     const [globalState, globalActions] = useGlobal();
 
+    useEffect(() => {
+        document.body.style.background = globalState.background ? globalState.background : "#f1f1f1";
+    }, [globalState.background]);
+
     return (
         <ThemeProvider theme={theme}>
             <div style={{ display: "flex" }}>
@@ -111,10 +115,8 @@ export default function App() {
                                 <HomePage />
                             </Route>
                             <Route path={"/purchase"}>
-                                <div style={{ background: "#ffffff" }}>
-                                    <HeaderLineComponent />
-                                    <PurchasePage />
-                                </div>
+                                <HeaderLineComponent />
+                                <PurchasePage />
                             </Route>
                             <Route component={NotFoundPage} />
                         </Switch>

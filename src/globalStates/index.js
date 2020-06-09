@@ -5,6 +5,7 @@ const initialState = {
     counter: 0,
     openDrawer: true,
     alertData: null,
+    background: null,
 };
 
 const actions = {
@@ -25,6 +26,12 @@ const actions = {
     },
     closeAlert(store) {
         store.setState({ alertData: null });
+    },
+    setBackgroundPage(store, background) {
+        store.setState({ background });
+    },
+    resetBackgroundPage(store) {
+        store.setState({ background: null });
     },
 };
 

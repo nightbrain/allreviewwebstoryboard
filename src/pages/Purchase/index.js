@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MiddleContentComponent from "../../components/MiddleContent";
 import TabSegmentComponent from "../Home/TabSegmentComponent";
 import useStyles from "./style";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import PriceItemComponent from "./priceItem";
+import useGlobal from "../../globalStates";
 
 export default function PurchasePage() {
     const classes = useStyles();
+    const [, globalActions] = useGlobal();
+
+    useEffect(() => {
+        globalActions.setBackgroundPage("#ffffff");
+        return () => {
+            globalActions.resetBackgroundPage();
+        };
+    }, []);
 
     function renderTab1() {
         return (
