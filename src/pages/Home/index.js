@@ -10,7 +10,7 @@ import ProcedureComponent from "./ProcedureComponent";
 import CustomListComponent from "./CustomListComponent";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import useGlobal from "../../gloablStates";
+import useGlobal from "../../globalStates";
 
 export default function HomePage() {
     const classes = useStyles();

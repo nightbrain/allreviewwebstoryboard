@@ -4,7 +4,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import List from "@material-ui/core/List";
-import useGlobal from "../../gloablStates";
+import useGlobal from "../../globalStates";
 import * as PropTypes from "prop-types";
 import { useLocation, useHistory } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";

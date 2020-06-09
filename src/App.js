@@ -6,7 +6,7 @@ import HomePage from "./pages/Home";
 import PurchasePage from "./pages/Purchase";
 import NotFoundPage from "./pages/404";
 import "./App.scss";
-import useGlobal from "./gloablStates";
+import useGlobal from "./globalStates";
 import AlertComponent from "./components/Alert";
 
 const theme = createMuiTheme({
