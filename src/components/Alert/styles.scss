@@ -1,0 +1,20 @@
+.alert .MuiBackdrop-root {
+    background: transparent !important;
+}
+
+.alert .MuiPaper-rounded {
+    border-radius: 0 !important;
+}
+
+.alert .MuiPaper-elevation24 {
+    border: 1px solid #bfbfbf;
+    box-shadow: none;
+}
+
+.alert button span {
+    padding: 3px;
+}
+
+.alert .MuiDialog-paperWidthSm {
+    min-width: 600px;
+}
